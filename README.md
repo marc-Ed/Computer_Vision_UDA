@@ -12,7 +12,9 @@ Ainsi, l'approche se découpe en plusieurs parties :
 Cette méthode repose sur le constat qu'un classifieur seul overfit le 'shift-noise' issu du changement de domaine (erreur de classification non uniforme sur l'ensemble des classes). Les performances du classifieur serait améliorées dans le cas où le 'shift-noise' soit plus uniformes. C'est pour cela qu'un cGAN est intégré dans le but de filter un tel bruit et ainsi de générer des images 'plus propres'.
 
 Le code a donc pour vocation d'implémenter cette approche à partir de l'architecture décrites au sein du papier (classifier convNet, generateur/discriminateur cGAN avec architecture suivant DCGAN).
-La méthode d'entrainment permettant d'améliorer itérativement un classifieur pré-entrainer sur MNIST, nous avons investiguer comment améliorer le plus possible ce classifieur initiale. En remarquant que le dataset SVHN est relativement plus complexe / diversifié que celui du MNIST (expliquant l'écart de performance entre SVHN->MNIST et MNIST->SVHN), nous avons ajouter une étape de data-augmentation permettant d'améliorer les performances du classifieur initial.
+La méthode d'entrainment permettant d'améliorer itérativement un classifieur pré-entrainer sur MNIST, nous avons investigué comment améliorer le plus possible ce classifieur initiale. En remarquant que le dataset SVHN est relativement plus complexe / diversifié que celui du MNIST (expliquant l'écart de performance entre SVHN->MNIST et MNIST->SVHN), nous avons ajouter une étape de data-augmentation permettant d'améliorer les performances du classifieur initial.
+
+Enfin, nous avons réalisé un benchmark afin de mesurer les gains en performance sur un classifieur CNN assez simple, uniquement en pré-traitant en amont les données MNIST et SVHN avant entraînement et test. Ce benchmark a montré qu'un bon pré-traitement des données permettaient déjà de passer d'une accuracy de 34% à 59%.
 
 # Répertoire
 
