@@ -1,6 +1,3 @@
-"""
-Dataloader functions
-"""
 from torchvision.datasets import MNIST, SVHN
 from torchvision import transforms
 from torch.utils.data import DataLoader

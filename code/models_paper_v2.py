@@ -1,19 +1,9 @@
-"""
-Models Architectures
-"""
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-
 class ConvNet(nn.Module):
     def __init__(self, channels=1, classes=10, img_size=32):
-        """
-        Args:
-            channels (int): Number of channels of the input image.
-            classes (int): Number of classes for classification.
-            img_size (int): Size of the input image, assuming square images.
-        """
         super(ConvNet, self).__init__()
 
         ## Feature extraction

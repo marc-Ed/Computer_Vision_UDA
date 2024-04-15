@@ -9,10 +9,9 @@ import torch.nn as nn
 from torch.autograd import Variable
 import torch.optim as optim
 
-from util.metrics import accuracy, class_accuracy
-from models.models_paper_v2 import ConvNet, Generator, Discriminator
+from code.models_paper_v2 import ConvNet, Generator, Discriminator
 from data.datasets_v2 import load_mnist, load_svhn
-from training.classif_training import classifier_train_step, cls_pretraining
+from code.classif_training import accuracy, class_accuracy, classifier_train_step, cls_pretraining 
 import torchvision.utils as vutils
 
 # --------------------
@@ -33,7 +32,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 N_CLASSES = 10
 
 # Parameters classifier pretraining
-N_EPOCHS_CLS_PRETRAINING = 25 # 25
+N_EPOCHS_CLS_PRETRAINING = 1 # 25
 # Learning rate classifier pretraining
 LR_CLS_PRETRAINING = 3e-4
 
@@ -45,7 +44,7 @@ LR_D_PRETRAINING = 1e-5 #1e-5
 # Learning rate generator pretraining
 LR_G_PRETRAINING = 1e-5 # 1e-5
 # Parameters classifier pretraining
-N_EPOCHS_GAN_PRETRAINING = 30 #30
+N_EPOCHS_GAN_PRETRAINING = 1 #30
 
 # Learning rate classifier pretraining
 LR_CLS_TRAINING = 1e-5
@@ -54,7 +53,7 @@ LR_D_TRAINING = 5e-5 # 5e-5
 # Learning rate generator training
 LR_G_TRAINING = 5e-5 # 5e-5
 # Parameters training
-N_EPOCHS_TRAINING = 100
+N_EPOCHS_TRAINING = 1 # 100
 
 IMGS_TO_DISPLAY_PER_CLASS = 20
 
