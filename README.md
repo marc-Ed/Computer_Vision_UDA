@@ -18,8 +18,8 @@ La méthode d'entrainment permettant d'améliorer itérativement un classifieur 
 
 Le répertoire comprends un ensemble de fichier .py représentant la solution finale :
 - ```main_v3.py``` : fichier principal reprenant la définition des paramètres, bouble de pré-entrainement /entrainement et appel de fonction
-- ```models/models_paper_v2.py``` : définition l'architecture du classifieur, du générateur et du dénominateur
-- ```training/classif_training.py``` : définition les boucles de pré-entrainement / entrainement du classifieur
+- ```code/models_paper_v2.py``` : définition l'architecture du classifieur, du générateur et du discriminateur
+- ```code/classif_training.py``` : définition les boucles de pré-entrainement / entrainement du classifieur
 - ```data/dataset.py``` : définition des dataloader pour MNIST / SVHN, sans data_augmentation pour reproduire les performances du papier
 - ```data/dataset_v2.py``` : intégration de la data_augmentation pour améliorer les performances de la méthode globale
 - ```_MNIST_SVHN_100epochs_results``` : dossier contenant les résultats sans data-augmentation - accuracy 55.99% (papier = 63,4%)
