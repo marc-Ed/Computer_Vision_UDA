@@ -1,0 +1,4 @@
+data/SVHN/train_32x32.mat
+datasets/test_32x32.mat
+datasets/train_32x32.mat
+datasets/MNIST/
